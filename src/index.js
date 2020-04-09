@@ -1,5 +1,5 @@
-import * as core from "@actions/core";
-import { run } from "./close-pull-request";
+const core = require("@actions/core");
+const run = require("./toggle-pull-request");
 
 run().catch(err => {
   core.setFailed(err.message);
